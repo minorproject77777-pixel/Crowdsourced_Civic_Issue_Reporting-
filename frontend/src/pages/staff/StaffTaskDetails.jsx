@@ -10,7 +10,7 @@ import PriorityBadge from '../../components/PriorityBadge';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import IssueMap from '../../components/IssueMap';
 
-const API_ORIGIN = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace('/api', '');
+const API_ORIGIN = (import.meta.env.API_URL || 'http://localhost:5000/api').replace('/api', '');
 
 export default function StaffTaskDetails() {
   const { id } = useParams();

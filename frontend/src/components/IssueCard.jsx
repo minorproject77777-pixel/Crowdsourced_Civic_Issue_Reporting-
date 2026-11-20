@@ -13,7 +13,7 @@ export default function IssueCard({ issue }) {
       <div className="relative h-36 w-full overflow-hidden bg-ink-50">
         {image ? (
           <img
-            src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${image.url}`}
+            src={`${import.meta.env.API_URL?.replace('/api', '') || 'http://localhost:5000'}${image.url}`}
             alt={issue.title}
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />
