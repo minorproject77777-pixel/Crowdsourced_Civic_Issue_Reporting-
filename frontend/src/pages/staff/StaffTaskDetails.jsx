@@ -4,13 +4,11 @@ import { MapPin, User, Phone, Camera, CheckCircle2 } from 'lucide-react';
 import { staffService } from '../../services/staffService';
 import { issueService } from '../../services/issueService';
 import { useToast } from '../../context/ToastContext';
-import { getErrorMessage } from '../../services/api';
+import { API_ORIGIN, getErrorMessage } from '../../services/api';
 import StatusBadge from '../../components/StatusBadge';
 import PriorityBadge from '../../components/PriorityBadge';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import IssueMap from '../../components/IssueMap';
-
-const API_ORIGIN = (import.meta.env.API_URL || 'http://localhost:5000/api').replace('/api', '');
 
 export default function StaffTaskDetails() {
   const { id } = useParams();

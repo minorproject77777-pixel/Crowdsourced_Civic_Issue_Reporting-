@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowUp, MessageSquare, ImageOff } from 'lucide-react';
+import { API_ORIGIN } from '../services/api';
 import StatusBadge from './StatusBadge';
 import PriorityBadge from './PriorityBadge';
 
@@ -13,7 +14,7 @@ export default function IssueCard({ issue }) {
       <div className="relative h-36 w-full overflow-hidden bg-ink-50">
         {image ? (
           <img
-            src={`${import.meta.env.API_URL?.replace('/api', '') || 'http://localhost:5000'}${image.url}`}
+            src={`${API_ORIGIN}${image.url}`}
             alt={issue.title}
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />

@@ -7,13 +7,11 @@ import {
 import { issueService } from '../../services/issueService';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
-import { getErrorMessage } from '../../services/api';
+import { API_ORIGIN, getErrorMessage } from '../../services/api';
 import StatusBadge from '../../components/StatusBadge';
 import PriorityBadge from '../../components/PriorityBadge';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import IssueMap from '../../components/IssueMap';
-
-const API_ORIGIN = (import.meta.env.API_URL || 'http://localhost:5000/api').replace('/api', '');
 
 const TIMELINE_STEPS = ['REPORTED', 'VERIFIED', 'ASSIGNED', 'IN_PROGRESS', 'RESOLVED'];
 
